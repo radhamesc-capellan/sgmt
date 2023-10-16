@@ -1,48 +1,37 @@
 module.exports = {
-  'env': {
-    'node': true,
-    'commonjs': true,
-    'es2021': true
+  env: {
+    node: true,
+    commonjs: true,
+    es2021: true,
   },
-  'extends': 'eslint:recommended',
-  'overrides': [
-  ],
-  'parserOptions': {
-    'ecmaVersion': 'latest'
+  extends: 'eslint:recommended',
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
   },
-  'ignorePatterns': [
+  ignorePatterns: [
     '/bin/cli.js',
     '/database/config/config.js',
     '/database/models/',
     'package.json',
     'package-lock.json',
   ],
-  'rules': {
+  rules: {
     'no-unused-vars': [
-      'off', { 
-        'vars': 'all', 
-        'args': 'after-used',
-        'ignoreRestSiblings': true 
-      }],
+      'off',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+      },
+    ],
     'padding-line-between-statements': [
       'error',
-      { 'blankLine': 'any', 'prev': '*', 'next': '*' },
+      { blankLine: 'any', prev: '*', next: '*' },
     ],
-    'indent': [
-      'error',
-      2
-    ],
-    'linebreak-style': [
-      'off',
-      'unix'
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
-    'semi': [
-      'off',
-      'never'
-    ]
-  }
-}
+    indent: ['error', 2],
+    'linebreak-style': ['off', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['off', 'never'],
+  },
+};
